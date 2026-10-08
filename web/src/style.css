@@ -1,0 +1,36 @@
+/* ===== 全局重置 =====
+   原项目缺了这个文件：html/body/#app 都没有高度，
+   下面 App.vue 里 .app{height:100%} 就撑不起来 → 整个页面塌成一条。 */
+
+* { box-sizing: border-box; }
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #060d1a;
+  color: #e0e6ed;
+  font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  /* ★ 关键：三维场景要自己铺满屏幕，全局滚动条必须关掉，
+       否则鼠标滚轮会被页面滚动吃掉，Cesium 缩放就会卡顿／失灵 */
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, p { margin: 0; }
+
+/* ===== 暗色滚动条 ===== */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: #1e3a5f;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: #2a4f7f; }

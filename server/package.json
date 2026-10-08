@@ -1,0 +1,18 @@
+{
+  "name": "city-digital-twin-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "后端服务：GIS 空间分析接口",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node src/index.js"
+  },
+  "dependencies": {
+    "@turf/buffer": "^7.2.0",
+    "@turf/distance": "^7.2.0",
+    "@turf/nearest-point": "^7.2.0",
+    "@turf/points-within-polygon": "^7.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.0"
+  }
+}

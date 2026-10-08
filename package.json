@@ -1,0 +1,13 @@
+{
+  "name": "city-digital-twin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "三维城市数字孪生 WebGIS 平台（教学版）",
+  "scripts": {
+    "dev": "concurrently -n server,web -c blue,green \"npm run dev --prefix server\" \"npm run dev --prefix web\""
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "concurrently": "^9.1.0"
+  }
+}
